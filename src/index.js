@@ -1,0 +1,55 @@
+var today = new Date();
+var day = today.getDay();
+var daylist = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday ",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+var date =
+  today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+var time = today.getHours() + ":" + today.getMinutes();
+var dateTime = time;
+let hours = today.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+  let minutes = today.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+}
+
+document.getElementById("current_date").innerHTML =
+  daylist[day] + " " + dateTime;
+
+function displayWeather(response) {
+  document.querySelector("#city-input").innerHTML = response.data.name;
+  document.querySelector("#current_temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#condition").innerHTML =
+    response.data.weather[0].main;
+}
+
+function searchCity(city) {
+  let apiKey = "119b80d8e84e19957be0ac69d3212f91";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-city").value;
+  searchCity(city);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+searchCity("Frankfurt");

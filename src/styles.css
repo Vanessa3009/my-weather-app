@@ -1,0 +1,106 @@
+
+      body {
+        font-family: 'Roboto', sans-serif;
+
+
+      }
+
+      h1 {
+        text-align: left;
+        font-size: 50px;
+        line-height: 50px;
+        margin: 50px 0 10px 30px;
+        font-weight: 700;
+        color: whitesmoke;
+      }
+      h2 {
+        text-align: left;
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 0 30px;
+        font-weight: 150;
+        color: whitesmoke;
+        
+      }
+      .search {
+        margin: 0 0 0 30px;
+        color: #525E75;
+        width: 75%;
+      }
+      
+      .wind, .sky {
+        font-size: 13px;
+        font-weight: 150;
+        position: relative;
+        left: 10px;
+      }
+      .weather-sign {
+        font-size: 150px;
+        color: #FFCF00;
+        margin: 0 0 0 50px;
+        padding-bottom: 20px;
+        opacity: 0.6;
+       
+      }
+      .message{
+        position: relative;
+        top: 5px;
+        left: 10px;
+        font-family: 'Indie Flower', cursive;
+        font-size: 15px;
+      }
+      
+      .searchbutton {
+        color: #525E75;
+        position: relative;
+        font-size: 20px;
+        background-color: transparent;
+        border: 0.5px solid whitesmoke;
+      }
+      .searchbutton:hover{
+        background-color: whitesmoke;
+      }
+      .weather-app{
+        border: 1px solid whitesmoke;
+        border-radius: 15px;
+        box-shadow:  0 0 1em #525E75;
+        padding: 20px;
+        margin: 30px auto;
+        max-width: 600px;
+        background: url(sky4.jpg) #88a2d3;
+        background-size: cover;
+        
+      }
+      .temperature{
+        font-weight: 600;
+        font-size: 80px;
+        line-height: 40px;
+        color: whitesmoke;
+      }
+
+      .celsius{
+        font-size: small;
+        position: relative;
+        top: -48px;
+        color: white;
+
+      }
+      .details{
+        position: relative;
+        left: 50px;
+        top: -20px;
+        color: whitesmoke;
+      }
+      .forecast{
+        color:#525E75;
+        font-size: 15px;
+        background-color: rgb(245, 245, 245, 0.5);
+        border: 0.5px solid whitesmoke;
+        border-radius: 15px;
+      }
+    .forecast:hover{
+      font-size: 22px;
+      transition: all 200ms ease-in-out;
+      cursor:zoom-in;
+    }
+    
