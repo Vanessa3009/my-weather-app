@@ -39,11 +39,10 @@ footer {
   left: 10px;
 }
 .weather-sign {
-  font-size: 150px;
-  color: #ffcf00;
   margin: 0 0 0 50px;
   padding-bottom: 20px;
-  opacity: 0.6;
+  height: 60px;
+  width: auto;
 }
 .message {
   position: relative;
