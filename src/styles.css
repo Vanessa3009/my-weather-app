@@ -43,6 +43,8 @@ footer {
   padding-bottom: 20px;
   height: 60px;
   width: auto;
+  position: relative;
+  left: 20px;
 }
 .message {
   position: relative;
@@ -93,7 +95,7 @@ footer {
 }
 .forecast {
   color: #525e75;
-  font-size: 15px;
+  font-size: 13px;
   background-color: rgb(245, 245, 245, 0.5);
   border: 0.5px solid whitesmoke;
   border-radius: 15px;
