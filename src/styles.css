@@ -32,7 +32,8 @@ footer {
 }
 
 .wind,
-.sky {
+.sky,
+.humidity {
   font-size: 13px;
   font-weight: 150;
   position: relative;
