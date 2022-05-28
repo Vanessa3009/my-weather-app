@@ -25,6 +25,12 @@ let dateTime = hours + ":" + minutes;
 document.getElementById("current_date").innerHTML =
   daylist[day] + " " + dateTime;
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "119b80d8e84e19957be0ac69d3212f91";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
+}
 function displayWeather(response) {
   document.querySelector("#city-input").innerHTML = response.data.name;
   document.querySelector("#current_temperature").innerHTML = Math.round(
@@ -44,6 +50,8 @@ function displayWeather(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].main);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -63,7 +71,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Frankfurt");
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
@@ -91,4 +100,3 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
