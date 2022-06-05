@@ -67,7 +67,7 @@ footer {
   margin: 30px auto;
   max-width: 600px;
   background: url(sky5.jpg) #88a2d3;
-  background-size: 100%;
+  background-size: cover;
 }
 .temperature {
   font-weight: 600;
