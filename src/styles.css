@@ -81,7 +81,7 @@ footer {
   position: relative;
   top: -48px;
   right: 5px;
-  color: white;
+  color: whitesmoke;
 }
 .details {
   position: relative;
@@ -97,6 +97,8 @@ footer {
   border-radius: 15px;
   text-align: center;
   margin-top: 15px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .forecast-temperature-min {
