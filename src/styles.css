@@ -6,7 +6,7 @@ h1 {
   text-align: left;
   font-size: 50px;
   line-height: 50px;
-  margin: 50px 0 10px 30px;
+  margin: 50px 0 10px 15px;
   font-weight: 700;
   color: whitesmoke;
 }
@@ -14,7 +14,7 @@ h2 {
   text-align: left;
   font-size: 20px;
   line-height: 25px;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 15px;
   font-weight: 250;
   color: whitesmoke;
 }
@@ -26,9 +26,9 @@ footer {
   padding-bottom: 20px;
 }
 .search {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 15px;
   color: #525e75;
-  width: 75%;
+  width: 80%;
 }
 
 .wind,
@@ -36,9 +36,6 @@ footer {
 .humidity {
   font-size: 13px;
   font-weight: 250;
-  position: relative;
-  left: 10px;
-  top: 8px;
 }
 .weather-sign {
   margin: 0 0 0 50px;
@@ -89,6 +86,7 @@ footer {
   left: 50px;
   top: -20px;
   color: whitesmoke;
+  margin: 15px auto;
 }
 .forecast {
   color: #525e75;
